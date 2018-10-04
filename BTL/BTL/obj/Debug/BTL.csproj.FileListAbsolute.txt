@@ -1,0 +1,7 @@
+C:\Users\truon\source\repos\BTL\BTL\bin\Debug\BTL.exe.config
+C:\Users\truon\source\repos\BTL\BTL\bin\Debug\BTL.exe
+C:\Users\truon\source\repos\BTL\BTL\bin\Debug\BTL.pdb
+C:\Users\truon\source\repos\BTL\BTL\obj\Debug\BTL.csprojAssemblyReference.cache
+C:\Users\truon\source\repos\BTL\BTL\obj\Debug\BTL.csproj.CoreCompileInputs.cache
+C:\Users\truon\source\repos\BTL\BTL\obj\Debug\BTL.exe
+C:\Users\truon\source\repos\BTL\BTL\obj\Debug\BTL.pdb
