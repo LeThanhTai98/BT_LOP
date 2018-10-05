@@ -6,50 +6,41 @@ using System.Threading.Tasks;
 
 namespace BTL
 {
-	class mQueue
+	class mStack
 	{
 		Element qHead;
-		Element qTail;
-		// Init
-		public mQueue()
+		public mStack()
 		{
-			qHead = qTail = null;
+			qHead = null;
 		}
 		public void push(Element el)
 		{
 			if(qHead == null)
 			{
-				qHead = qTail = el;
+				qHead = el;
 			}
 			else
 			{
-				qTail.Next = el;
-				qTail = el;
+				el.Next = qHead;
+				qHead = el;
 			}
 		}
 		public int pop()
 		{
 			if(qHead == null)
 			{
-				Console.WriteLine("Queue is Empty");
+				Console.WriteLine("Stack is Empty");
 				return 0;
 			}
-			else
-			{
-				int x = qHead.Data;
-				qHead = qHead.Next;
-				if (qHead == null)
-				{
-					qTail = null;
-				}
-				return x;
-			}
-			
+			int x = qHead.Data;
+			qHead = qHead.Next;
+
+			return x;
 		}
 		public void output()
 		{
 			Element a = qHead;
-			while(a != null)
+			while (a != null)
 			{
 				Console.Write(a.Data + " ");
 				a = a.Next;
