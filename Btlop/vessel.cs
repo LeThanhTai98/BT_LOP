@@ -9,6 +9,10 @@ namespace Btlop
     class vessel
     {   
         Stack<int>[] A = new Stack<int> [99] ;
+        public void in_vessel(int vitri, int giatri)
+        {
+            A[vitri].Push(giatri);
+        }
         public List<int> grab()
         {
             int i = 0;
