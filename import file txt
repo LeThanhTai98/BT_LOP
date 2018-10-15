@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.IO;
+
+
+namespace StreamTXT
+{
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            FileText ft = new FileText();
+            ft.FileName = @"C:\demo.txt";
+            ft.ReadData();
+            Console.ReadLine();
+        }
+    }
+}
