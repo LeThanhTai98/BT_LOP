@@ -8,10 +8,18 @@ namespace Btlop
 {
     class vessel
     {   
-        Stack<int>[] A = new Stack<int> [99] ;
+        Stack<int> [] A = new Stack<int> [99] ;
+        public void create_vessel (int soluong)
+        {
+            for(int i=0;i<soluong;i++)
+                A[i] = new Stack<int>();
+
+        }
         public void in_vessel(int vitri, int giatri)
         {
+             
             A[vitri].Push(giatri);
+
         }
         public List<int> grab()
         {
@@ -23,6 +31,18 @@ namespace Btlop
                 i++;
             }
             return tam ;
+        }
+        public void showvessel()
+        { int dem = 0;
+            while (A[dem] != null) {
+                int[] tam = new int[99];
+               tam = A[dem].ToArray();  
+                for(int i = 0; i < 3; i++)
+                {
+                    Console.Write(tam[i]);
+                }
+                dem++;
+                    } 
         }
         
     }
