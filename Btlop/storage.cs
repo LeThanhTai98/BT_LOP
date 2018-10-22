@@ -40,8 +40,9 @@ namespace Btlop
             {
                 while ( a.Count != 0)
                 {
-                    Console.WriteLine(a.Pop());
+                    Console.Write(a.Pop() + " " );
                 }
+                Console.WriteLine();
             }
         }
     }

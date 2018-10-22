@@ -39,9 +39,10 @@ namespace Btlop
                 tam = A[dem].ToArray();
                 int j = 0;
                 foreach ( int i in tam)
-                { Console.Write(tam[j]);
+                { Console.Write(tam[j] + " ");
                     j++;
                 };
+                Console.WriteLine();
                 dem++;
                     } 
         }
