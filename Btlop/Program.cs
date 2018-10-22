@@ -19,8 +19,11 @@ namespace Btlop
             {
                     a.in_vessel(i,dem++ );
             }
-
-            a.showvessel();
+            List<int> tam = a.grab();
+            foreach ( int i in tam)
+            {
+                Console.Write(i);
+            }
             Console.ReadKey();
         }
     }

@@ -11,7 +11,7 @@ namespace Btlop
         Stack<int> [] A = new Stack<int> [99] ;
         public void create_vessel (int soluong)
         {
-            for(int i=0;i<soluong;i++)
+            for(int i=0;i<=soluong;i++)
                 A[i] = new Stack<int>();
 
         }
@@ -36,11 +36,12 @@ namespace Btlop
         { int dem = 0;
             while (A[dem] != null) {
                 int[] tam = new int[99];
-               tam = A[dem].ToArray();  
-                for(int i = 0; i < 3; i++)
-                {
-                    Console.Write(tam[i]);
-                }
+                tam = A[dem].ToArray();
+                int j = 0;
+                foreach ( int i in tam)
+                { Console.Write(tam[j]);
+                    j++;
+                };
                 dem++;
                     } 
         }
