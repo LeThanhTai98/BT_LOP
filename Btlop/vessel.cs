@@ -7,45 +7,84 @@ using System.Threading.Tasks;
 namespace Btlop
 {
     class vessel
-    {   
-        Stack<int> [] A = new Stack<int> [99] ;
-        public void create_vessel (int soluong)
-        {
-            for(int i=0;i<=soluong;i++)
-                A[i] = new Stack<int>();
+    {
+        List<Stack<int>> A = new List<Stack<int>>();
+        int demstack = 0;
+        //public void create_vessel (int soluong)
+        //{
+        //    for(int i=0;i<=soluong;i++)
+        //        A[i] = new Stack<int>();
 
-        }
-        public void in_vessel(int vitri, int giatri)
+        //}
+        public int totalvessel(int n)
         {
-             
-            A[vitri].Push(giatri);
-
-        }
-        public List<int> grab()
-        {
-            int i = 0;
-            List<int> tam = new List<int>();
-            while (A[i].Count != 0) 
-            {               
-                tam.Insert(i, A[i].Pop());
-                i++;
+            int tong = 0;
+            foreach (Stack<int> i in A)
+            {
+                tong = tong + i.Count<int>();
             }
-            return tam ;
+            tong = tong / n;
+            Console.Write("tong la " + tong);
+            return tong ;
+        }
+        public void in_vessel()
+        {
+
+            Random rad = new Random();
+            for (int k = 0; k < 5; k++)
+            {
+                Stack<int> i = new Stack<int>();
+
+                for (int j = 0; j < 5; j++)
+                {
+                    i.Push(rad.Next(101));
+
+                }
+                A.Add(i);
+            }
+        }
+
+
+        public List<int> grab(int n)
+        {
+            int k = A.Count<Stack<int>>();
+            if (demstack == k) demstack = 0;
+            List<int> tam = new List<int>();
+            int dem = 0, dem2 = 0, dem3 = 0;
+            while (dem < n)
+            {
+                foreach (Stack<int> i in A)
+                {
+                    if (i.Count<int>() != 0 && dem2 == demstack)
+                    {
+                        tam.Add(i.Pop());
+                        dem++; demstack++;
+                        if (demstack >= k) demstack = 0;
+                    }
+                    if (dem == n) break;
+                    dem2++;
+                    if (demstack == 0) dem2 = 0;
+                    
+                }
+                if (dem3 > n) break;
+                dem3++;
+
+            }
+
+            return tam;
         }
         public void showvessel()
-        { int dem = 0;
-            while (A[dem] != null) {
-                int[] tam = new int[99];
-                tam = A[dem].ToArray();
-                int j = 0;
-                foreach ( int i in tam)
-                { Console.Write(tam[j] + " ");
-                    j++;
-                };
+        {
+            foreach (Stack<int> i in A)
+            {
+                Console.WriteLine("1 :" + " ");
+                foreach (int j in i)
+                {
+                    Console.Write(j + " ");
+                }
                 Console.WriteLine();
-                dem++;
-                    } 
+            }
+
         }
-        
     }
 }
