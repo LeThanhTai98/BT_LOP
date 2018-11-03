@@ -11,9 +11,9 @@ namespace Btlop
     {
         //Stack<int> [] A= new Stack<int>[99];
         List<Stack<int>> A = new List<Stack<int>>();
-        int[] mangtam = new int [99];
-         List<int> tam = new List<int>();
-        public void catching (List<int> tam)
+        int[] mangtam = new int[99];
+        List<int> tam = new List<int>();
+        public void catching(List<int> tam)
         {
             mangtam = tam.ToArray();
         }
@@ -21,7 +21,7 @@ namespace Btlop
         {
             int dem = 0;
             dem = mangtam.Count<int>();
-            for(int i=0;i<dem;i++)
+            for (int i = 0; i < dem; i++)
                 for (int j = 0; j < dem; j++)
                     if (mangtam[i] > mangtam[j])
                     {
@@ -36,11 +36,16 @@ namespace Btlop
         }
         public void showstorage()
         {
-            foreach (Stack <int> a in A)
+            int tong = 0;
+            foreach (Stack<int> a in A)
             {
-                while ( a.Count != 0)
+                if (a.Count<int>() > tong) tong = a.Count<int>();
+            }
+            for (int i = 0; i < tong; i++)
+            {
+                foreach (Stack<int> a in A)
                 {
-                    Console.Write(a.Pop() + " " );
+                    if (a.Count<int>() != 0 ) Console.Write(a.Pop() + " ");
                 }
                 Console.WriteLine();
             }

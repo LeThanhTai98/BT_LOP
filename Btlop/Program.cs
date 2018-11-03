@@ -20,7 +20,7 @@ namespace Btlop
 
             Console.WriteLine("dau vao ");
             a.showvessel();
-            int so_hang_ben_storage = 5;
+            int so_hang_ben_storage = 3;
             n = a.totalvessel(so_hang_ben_storage);
             for (int i = 0; i <= n; i++)
             {

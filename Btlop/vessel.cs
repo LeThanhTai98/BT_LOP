@@ -24,7 +24,7 @@ namespace Btlop
                 tong = tong + i.Count<int>();
             }
             tong = tong / n;
-            Console.Write("tong la " + tong);
+            
             return tong ;
         }
         public void in_vessel()
@@ -37,7 +37,8 @@ namespace Btlop
 
                 for (int j = 0; j < 5; j++)
                 {
-                    i.Push(rad.Next(101));
+                    if (k == 2 && j == 3) ;
+                    else i.Push(rad.Next(101));
 
                 }
                 A.Add(i);
@@ -48,13 +49,15 @@ namespace Btlop
         public List<int> grab(int n)
         {
             int k = A.Count<Stack<int>>();
-            if (demstack == k) demstack = 0;
+            
             List<int> tam = new List<int>();
             int dem = 0, dem2 = 0, dem3 = 0;
             while (dem < n)
             {
-                foreach (Stack<int> i in A)
+                
+                    foreach (Stack<int> i in A)
                 {
+                    if (i.Count<int>() == 0 && dem2 == demstack) demstack++;
                     if (i.Count<int>() != 0 && dem2 == demstack)
                     {
                         tam.Add(i.Pop());
@@ -66,9 +69,9 @@ namespace Btlop
                     if (demstack == 0) dem2 = 0;
                     
                 }
+                if (dem2 > n) break;
                 if (dem3 > n) break;
                 dem3++;
-
             }
 
             return tam;
