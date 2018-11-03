@@ -1,0 +1,5 @@
+﻿Chưa xong
+01. Còn xử lý sắp xếp + thêm vào storage
+02. Một số thắc mắc
+- 1 số phần tử bị trùng khi random
+- Chưa xử lý được trường hợp có thùng rỗng
