@@ -11,14 +11,22 @@ namespace Btlop
     {
         //Stack<int> [] A= new Stack<int>[99];
         List<Stack<int>> A = new List<Stack<int>>();
+        int num = 0;
+        int ltemp = 1;
+        string str1 = "";
         int[] mangtam = new int[99];
         List<int> tam = new List<int>();
+
+        public string Str1 { get => str1; set => str1 = value; }
+        public int Num { get => num; set => num = value; }
+
         public void catching(List<int> tam)
         {
             mangtam = tam.ToArray();
         }
         public void sapxep()
         {
+            
             int dem = 0;
             dem = mangtam.Count<int>();
             for (int i = 0; i < dem; i++)
@@ -31,24 +39,43 @@ namespace Btlop
                     }
             Stack<int> temp = new Stack<int>();
             for (int i = 0; i < dem; i++)
+            {
+                Num++;
+                Str1 += "Time " + Num + ":\t" + mangtam[i] + "\t" + "->" + "\t" + ltemp + "\r\n";
                 temp.Push(mangtam[i]);
+               
+                
+            }
             A.Add(temp);
+            ltemp++;
         }
-        public void showstorage()
+        public string showstorage()
         {
+            String str = "";
             int tong = 0;
             foreach (Stack<int> a in A)
             {
                 if (a.Count<int>() > tong) tong = a.Count<int>();
             }
-            for (int i = 0; i < tong; i++)
+            for (int i = 1; i <= A.Count; i++)
             {
-                foreach (Stack<int> a in A)
+                str += "\t" + "c" + i;
+               
+
+            }
+            Console.WriteLine();
+            for (int i = 1; i <= tong; i++)
+            {
+                str += "\r\n" + "r" + i + "\t";
+                
+                ; foreach (Stack<int> a in A)
                 {
-                    if (a.Count<int>() != 0 ) Console.Write(a.Pop() + " ");
+                    if (a.Count<int>() != 0 ) str += (a.Pop() + "\t");
                 }
                 Console.WriteLine();
             }
+            return str;
         }
+        
     }
 }
