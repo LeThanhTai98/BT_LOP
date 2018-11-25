@@ -67,12 +67,23 @@ namespace Btlop
             for (int i = 1; i <= tong; i++)
             {
                 str += "\r\n" + "r" + i + "\t";
-                
-                ; foreach (Stack<int> a in A)
+                int dem = 0;
+                 foreach (Stack<int> a in A)
                 {
-                    if (a.Count<int>() != 0 ) str += (a.Pop() + "\t");
+                    if (a.Count<int>() != 0)
+                    {
+                        str += (a.Pop() + "\t");
+                        dem++;
+                    }
+                    
                 }
-                Console.WriteLine();
+                while (dem < A.Count)
+                {
+                    str += ("x" + "\t");
+                    dem++;
+                }
+                
+                    
             }
             return str;
         }

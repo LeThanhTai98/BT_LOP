@@ -15,10 +15,10 @@ namespace Btlop
 
             long bg = (long)(DateTime.UtcNow - Jan1st1970).TotalMilliseconds;
             vessel a = new vessel();
-            int n = 5, dem = 0;
+            int n;
             
             storage b = new storage();
-            Random rad = new Random();
+        
          
             nhapfile nhap = new nhapfile();
             nhap.FileName = "demo2.txt";
@@ -28,7 +28,6 @@ namespace Btlop
                 int column;
                 column = nhap.Column;
                 List<Stack<int>> stackss = new List<Stack<int>>();
-
                 a.A1 = nhap.Stacks;
                 Console.WriteLine("dau vao ");
                 a.showvessel();
