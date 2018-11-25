@@ -35,7 +35,7 @@ namespace Btlop
                 n = a.totalvessel(so_hang_ben_storage);
                 for (int i = 0; i <= n; i++)
                 {
-                    List<int> tam = a.grab1(so_hang_ben_storage);
+                    List<double> tam = a.grab1(so_hang_ben_storage);
                     b.catching(tam);
 
                     b.sapxep();

@@ -112,15 +112,15 @@ namespace Btlop
         }
         public void showvessel()
         {
-            foreach (Stack<double> i in A1)
-            {
-                Console.WriteLine("1 :" + " ");
-                foreach (double j in i)
-                {
-                    Console.Write(j + " ");
-                }
-                Console.WriteLine();
-            }
+            //foreach (Stack<double> i in A1)
+            //{
+            //    Console.WriteLine("1 :" + " ");
+            //    foreach (double j in i)
+            //    {
+            //        Console.Write(j + " ");
+            //    }
+            //    Console.WriteLine();
+            //}
             //for(int i = 0; i < A1.Count; i++)
             //{
 

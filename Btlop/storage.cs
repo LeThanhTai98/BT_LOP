@@ -10,17 +10,17 @@ namespace Btlop
 
     {
         //Stack<int> [] A= new Stack<int>[99];
-        List<Stack<int>> A = new List<Stack<int>>();
+        List<Stack<double>> A = new List<Stack<double>>();
         int num = 0;
         int ltemp = 1;
         string str1 = "";
-        int[] mangtam = new int[99];
+        double[] mangtam = new double[99];
         List<int> tam = new List<int>();
 
         public string Str1 { get => str1; set => str1 = value; }
         public int Num { get => num; set => num = value; }
 
-        public void catching(List<int> tam)
+        public void catching(List<double> tam)
         {
             mangtam = tam.ToArray();
         }
@@ -28,16 +28,16 @@ namespace Btlop
         {
             
             int dem = 0;
-            dem = mangtam.Count<int>();
+            dem = mangtam.Count<double>();
             for (int i = 0; i < dem; i++)
                 for (int j = 0; j < dem; j++)
                     if (mangtam[i] > mangtam[j])
                     {
-                        int tam2 = mangtam[i];
+                        double tam2 = mangtam[i];
                         mangtam[i] = mangtam[j];
                         mangtam[j] = tam2;
                     }
-            Stack<int> temp = new Stack<int>();
+            Stack<double> temp = new Stack<double>();
             for (int i = 0; i < dem; i++)
             {
                 Num++;
@@ -53,9 +53,9 @@ namespace Btlop
         {
             String str = "";
             int tong = 0;
-            foreach (Stack<int> a in A)
+            foreach (Stack<double> a in A)
             {
-                if (a.Count<int>() > tong) tong = a.Count<int>();
+                if (a.Count<double>() > tong) tong = a.Count<double>();
             }
             for (int i = 1; i <= A.Count; i++)
             {
@@ -68,9 +68,9 @@ namespace Btlop
             {
                 str += "\r\n" + "r" + i + "\t";
                 int dem = 0;
-                 foreach (Stack<int> a in A)
+                 foreach (Stack<double> a in A)
                 {
-                    if (a.Count<int>() != 0)
+                    if (a.Count<double>() != 0)
                     {
                         str += (a.Pop() + "\t");
                         dem++;

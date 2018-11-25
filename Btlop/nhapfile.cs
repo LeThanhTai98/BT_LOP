@@ -45,7 +45,7 @@ using System.Text.RegularExpressions;
         public int Heightyard { get => heightyard; set => heightyard = value; }
         public List<Stack<double>> Stacks { get => stacks; set => stacks = value; }
 
-        private System.IO.FileStream fs;
+        
 
         private String pathProject ;
         
