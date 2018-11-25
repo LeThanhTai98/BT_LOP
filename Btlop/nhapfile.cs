@@ -170,7 +170,7 @@ using System.Text.RegularExpressions;
                                             }
                                             
                                         }
-                                        if (tempNum2 == 0) same.Add(tempNum);
+                                         same.Add(tempNum);
                                     }
                                     if (tempNum2 == 0) Stacks[i].Push(numbers);
                                     else stacks[i].Push(tempNum2);

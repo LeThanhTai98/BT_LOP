@@ -8,7 +8,7 @@
 //containers
 	c1	c2	c3	c4	c5	c6	c7	c8	c9	c10
 r1	5	1	20	x	11	25	6	34	x	32
-r2	13	33	14	10	x	x	x	x	x	x
-r3	48	12	42	22	18	45	29	47	x	19
-r4	x	37	x	x	33	x	x	x	17	28
+r2	13	33	33	10	x	x	x	x	x	x
+r3	48	12	42	22	x	x	29	33	x	x
+r4	x	37	x	x	33	x	x	x	33	33
 
