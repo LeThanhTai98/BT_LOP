@@ -31,6 +31,8 @@ namespace Btlop
                 a.A1 = nhap.Stacks;
                 Console.WriteLine("dau vao ");
                 a.showvessel();
+                string str = a.Str;
+                Console.WriteLine(str);
                 int so_hang_ben_storage = nhap.Heightyard;
                 n = a.totalvessel(so_hang_ben_storage);
                 for (int i = 0; i <= n; i++)
@@ -45,7 +47,7 @@ namespace Btlop
 
                 long end = (long)(DateTime.UtcNow - Jan1st1970).TotalMilliseconds;
 
-                nhap.saveFile(b, "ketqua.txt", (end - bg) * 0.001);
+                nhap.saveFile(b,a, "ketqua.txt", (end - bg) * 0.001);
                 
             }
             Console.ReadKey();

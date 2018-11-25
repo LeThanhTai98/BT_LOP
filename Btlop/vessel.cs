@@ -10,9 +10,10 @@ namespace Btlop
     {
         List<Stack<double>> A = new List<Stack<double>>();
         int demstack = 0;
-        
+        string str = "";
 
         public List<Stack<double>> A1 { get => A; set => A = value; }
+        public string Str { get => str; set => str = value; }
 
         public void create_vessel(int soluong)
         {
@@ -111,20 +112,21 @@ namespace Btlop
             return tam;
         }
         public void showvessel()
-        {
-            //foreach (Stack<double> i in A1)
-            //{
-            //    Console.WriteLine("1 :" + " ");
-            //    foreach (double j in i)
-            //    {
-            //        Console.Write(j + " ");
-            //    }
-            //    Console.WriteLine();
-            //}
-            //for(int i = 0; i < A1.Count; i++)
-            //{
-
-            //}
+        { int k = 0;  
+            foreach (Stack<double> i in A1)
+            { 
+                
+                Str += ("c" + k + "\t");
+                k++;
+                foreach (double j in i)
+                {
+                    
+                    Str += (j + "\t");
+                }
+                
+                Str += ("\r\n");
+            }
+             
 
         }
     }

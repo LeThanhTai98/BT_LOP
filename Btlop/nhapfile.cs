@@ -196,14 +196,15 @@ using System.Text.RegularExpressions;
                
         }
 
-        
-        
-        public void saveFile(storage y, String fileName, double ti)
+
+
+        public void saveFile(storage y, vessel v ,String fileName, double ti)
         {
             try
             {
                 using (System.IO.StreamWriter file = new System.IO.StreamWriter(pathProject + fileName, true))
                 {
+                    file.Write("\r\n" + "//INPUT" + v.Str + "\r\n");
                     file.Write("\r\n" + "//OUTPUT" + "\r\n");
                     file.Write(y.Num + "//Total Cost of moving" + "\r\n");
                     file.Write("0//Cost of moving to Temporary Yard" + "\r\n");
