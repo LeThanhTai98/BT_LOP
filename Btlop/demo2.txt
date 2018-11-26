@@ -2,9 +2,9 @@
 //ship
 4//height
 10//columns
-21//containers
+22//containers
 //yard
-5//height
+20//height
 //containers
 	c1	c2	c3	c4	c5	c6	c7	c8	c9	c10
 r1	5	1	20	x	11	25	6	34	x	32

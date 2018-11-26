@@ -124,9 +124,7 @@ using System.Text.RegularExpressions;
                         {
                             if (temp >= Height) break;
                             String[] word = str.Split('	');
-                            foreach (string a in word)
-                                Console.Write(a);
-                            Console.WriteLine(word.Length);
+                           
                             for (int i = 0; i < word.Length; i++)
                             {
                                 tempString[temp, i] = word[i];
@@ -135,7 +133,7 @@ using System.Text.RegularExpressions;
                             }
 
                             temp++;
-                            Console.WriteLine("temp la " + temp);
+                            
                         }
 
 
@@ -198,7 +196,7 @@ using System.Text.RegularExpressions;
 
 
 
-        public void saveFile(storage y, vessel v ,String fileName, double ti)
+        public void saveFile(storage y, vessel v ,temp t ,String fileName, double ti)
         {
             try
             {
@@ -206,12 +204,12 @@ using System.Text.RegularExpressions;
                 {
                     file.Write("\r\n" + "//INPUT" + v.Str + "\r\n");
                     file.Write("\r\n" + "//OUTPUT" + "\r\n");
-                    file.Write(y.Num + "//Total Cost of moving" + "\r\n");
-                    file.Write("0//Cost of moving to Temporary Yard" + "\r\n");
+                    file.Write((y.Num+t.Tempnum) + "//Total Cost of moving" + "\r\n");
+                    file.Write(t.Tempnum+"//Cost of moving to Temporary Yard" + "\r\n");
+                    file.Write( "//Containers Temporary Yard" +"\r\n"+ t.Strtemp+ "\r\n");
                     file.Write(ti + "s//Total Cost of moving" + "\r\n");
                     file.Write("//Containers Position in Main Yard" + "\r\n");
                     file.Write(y.showstorage());
-                    file.Write("\r\n" + "//Containers Temporary Yard" + "\r\n");
                     file.Write("\r\n" + "//Schedule of Moving" + "\r\n");
                     file.Write(y.Str1);
                     file.Close();

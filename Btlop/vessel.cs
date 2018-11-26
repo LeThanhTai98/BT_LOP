@@ -80,53 +80,56 @@ namespace Btlop
 
             return tam;
         }
-        public List<double> grab2(int n)
-        {
-            int k = A1.Count<Stack<double>>();
+        //public List<double> grab2(int n)
+        //{
+        //    int k = A1.Count<Stack<double>>();
 
-            List<double> tam = new List<double>();
-            int dem = 0, dem2 = 0, dem3 = 0;
-            while (dem < n)
+        //    List<double> tam = new List<double>();
+        //    int dem = 0, dem2 = 0, dem3 = 0;
+        //    while (dem < n)
+        //    {
+
+        //        foreach (Stack<double> i in A1)
+        //        {
+        //            if (i.Count<double>() == 0 && dem2 == demstack) demstack++;
+        //            if (i.Count<double>() != 0 && dem2 == demstack)
+        //            {
+        //                tam.Add(i.Pop());
+        //                dem++; demstack++;
+        //                if (demstack >= k) demstack = 0;
+        //            }
+        //            if (dem == n) break;
+        //            dem2++;
+        //            if (demstack == 0) dem2 = 0;
+
+        //        }
+        //        if (dem2 > n) break;
+        //        if (dem3 > n) break;
+        //        dem3++;
+        //    }
+
+        //    return tam;
+        //}
+        //*************?
+        public void showvessel()
+        {
+            int k = 0;
+            foreach (Stack<double> i in A1)
             {
 
-                foreach (Stack<double> i in A1)
-                {
-                    if (i.Count<double>() == 0 && dem2 == demstack) demstack++;
-                    if (i.Count<double>() != 0 && dem2 == demstack)
-                    {
-                        tam.Add(i.Pop());
-                        dem++; demstack++;
-                        if (demstack >= k) demstack = 0;
-                    }
-                    if (dem == n) break;
-                    dem2++;
-                    if (demstack == 0) dem2 = 0;
-
-                }
-                if (dem2 > n) break;
-                if (dem3 > n) break;
-                dem3++;
-            }
-
-            return tam;
-        }
-        public void showvessel()
-        { int k = 0;  
-            foreach (Stack<double> i in A1)
-            { 
-                
                 Str += ("c" + k + "\t");
                 k++;
                 foreach (double j in i)
                 {
-                    
+
                     Str += (j + "\t");
                 }
-                
+
                 Str += ("\r\n");
             }
-             
+
 
         }
+
     }
 }

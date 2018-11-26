@@ -13,37 +13,130 @@ c10	32	33.5
 
 
 //OUTPUT
-21//Total Cost of moving
-0//Cost of moving to Temporary Yard
-0.787s//Total Cost of moving
+32//Total Cost of moving
+10//Cost of moving to Temporary Yard
+//Containers Temporary Yard
+5	1	20	22.3	11.1	25	6	34	33.4	22.1	
+0.08s//Total Cost of moving
 //Containers Position in Main Yard
-	c1	c2	c3	c4	c5
-r1	1	6	13	11	22.1	
-r2	5	25	22.2	22	x	
-r3	11.1	32	33	29	x	
-r4	20	33.4	33.1	33.3	x	
-r5	22.3	34	33.2	33.5	x	
+	c1	c2
+r1	1	22.1	
+r2	5	37	
+r3	6	x	
+r4	11	x	
+r5	11.1	x	
+r6	13	x	
+r7	20	x	
+r8	22	x	
+r9	22.2	x	
+r10	22.3	x	
+r11	25	x	
+r12	29	x	
+r13	32	x	
+r14	33	x	
+r15	33.1	x	
+r16	33.2	x	
+r17	33.3	x	
+r18	33.4	x	
+r19	33.5	x	
+r20	34	x	
+//Schedule of Moving
+Time 1:tempyard	34	->	1
+Time 2:ship		33.5	->	1
+Time 3:tempyard	33.4	->	1
+Time 4:ship		33.3	->	1
+Time 5:ship		33.2	->	1
+Time 6:ship		33.1	->	1
+Time 7:ship		33	->	1
+Time 8:ship		32	->	1
+Time 9:ship		29	->	1
+Time 10:tempyard	25	->	1
+Time 11:tempyard	22.3	->	1
+Time 12:ship		22.2	->	1
+Time 13:ship		22	->	1
+Time 14:tempyard	20	->	1
+Time 15:ship		13	->	1
+Time 16:tempyard	11.1	->	1
+Time 17:ship		11	->	1
+Time 18:tempyard	6	->	1
+Time 19:tempyard	5	->	1
+Time 20:tempyard	1	->	1
+Time 21:ship		37	->	2
+Time 22:tempyard	22.1	->	2
+
+//INPUT
+
+//OUTPUT
+0//Total Cost of moving
+0//Cost of moving to Temporary Yard
 //Containers Temporary Yard
 
+0.06s//Total Cost of moving
+//Containers Position in Main Yard
+	c1	c2
 //Schedule of Moving
-Time 1:	22.3	->	1
-Time 2:	20	->	1
-Time 3:	11.1	->	1
-Time 4:	5	->	1
-Time 5:	1	->	1
-Time 6:	34	->	2
-Time 7:	33.4	->	2
-Time 8:	32	->	2
-Time 9:	25	->	2
-Time 10:	6	->	2
-Time 11:	33.2	->	3
-Time 12:	33.1	->	3
-Time 13:	33	->	3
-Time 14:	22.2	->	3
-Time 15:	13	->	3
-Time 16:	33.5	->	4
-Time 17:	33.3	->	4
-Time 18:	29	->	4
-Time 19:	22	->	4
-Time 20:	11	->	4
-Time 21:	22.1	->	5
+
+//INPUTc0	
+c1	5	13	11	
+c2	1	33	22	37	
+c3	20	33.1	22.1	
+c4	22.3	22.2	
+c5	11.1	33.2	
+c6	25	
+c7	6	29	
+c8	34	33.3	
+c9	33.4	
+c10	32	33.5	
+
+
+//OUTPUT
+32//Total Cost of moving
+10//Cost of moving to Temporary Yard
+//Containers Temporary Yard
+5	1	20	22.3	11.1	25	6	34	33.4	22.1	
+0.062s//Total Cost of moving
+//Containers Position in Main Yard
+	c1	c2
+r1	1	22.1	
+r2	5	37	
+r3	6	x	
+r4	11	x	
+r5	11.1	x	
+r6	13	x	
+r7	20	x	
+r8	22	x	
+r9	22.2	x	
+r10	22.3	x	
+r11	25	x	
+r12	29	x	
+r13	32	x	
+r14	33	x	
+r15	33.1	x	
+r16	33.2	x	
+r17	33.3	x	
+r18	33.4	x	
+r19	33.5	x	
+r20	34	x	
+//Schedule of Moving
+Time 1:tempyard	34	->	1
+Time 2:ship		33.5	->	1
+Time 3:tempyard	33.4	->	1
+Time 4:ship		33.3	->	1
+Time 5:ship		33.2	->	1
+Time 6:ship		33.1	->	1
+Time 7:ship		33	->	1
+Time 8:ship		32	->	1
+Time 9:ship		29	->	1
+Time 10:tempyard	25	->	1
+Time 11:tempyard	22.3	->	1
+Time 12:ship		22.2	->	1
+Time 13:ship		22	->	1
+Time 14:tempyard	20	->	1
+Time 15:ship		13	->	1
+Time 16:tempyard	11.1	->	1
+Time 17:ship		11	->	1
+Time 18:tempyard	6	->	1
+Time 19:tempyard	5	->	1
+Time 20:tempyard	1	->	1
+Time 21:ship		37	->	2
+Time 22:tempyard	22.1	->	2

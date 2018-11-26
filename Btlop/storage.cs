@@ -14,7 +14,8 @@ namespace Btlop
         int num = 0;
         int ltemp = 1;
         string str1 = "";
-        double[] mangtam = new double[99];
+        
+        List<double> mangtam = new List<double>();
         List<int> tam = new List<int>();
 
         public string Str1 { get => str1; set => str1 = value; }
@@ -22,13 +23,13 @@ namespace Btlop
 
         public void catching(List<double> tam)
         {
-            mangtam = tam.ToArray();
+            mangtam = tam;
         }
         public void sapxep()
         {
             
             int dem = 0;
-            dem = mangtam.Count<double>();
+            dem = mangtam.Count<double>() ;
             for (int i = 0; i < dem; i++)
                 for (int j = 0; j < dem; j++)
                     if (mangtam[i] > mangtam[j])
@@ -45,6 +46,40 @@ namespace Btlop
                 temp.Push(mangtam[i]);
                
                 
+            }
+            A.Add(temp);
+            ltemp++;
+        }
+        public void sapxep2(temp c)
+        {
+
+            int dem = 0;
+            dem = mangtam.Count + c.Mangtemp.Count;
+            for(int i = 0; i < c.Mangtemp.Count; i++)
+            {
+                mangtam.Add(c.Mangtemp[i]);
+            }
+            for (int i = 0; i < dem; i++)
+                for (int j = 0; j < dem; j++)
+                    if (mangtam[i] > mangtam[j])
+                    {
+                        double tam2 = mangtam[i];
+                        mangtam[i] = mangtam[j];
+                        mangtam[j] = tam2;
+                    }
+            Stack<double> temp = new Stack<double>();
+            for (int i = 0; i < dem; i++)
+            {
+                Num++;
+                int dem2 = 0;
+                for(int j = 0; j < c.Mangtemp.Count; j++)
+                {
+                    if (mangtam[i] == c.Mangtemp[j]) dem2++;
+                }
+                if (dem2 == 0)  Str1 += "Time " + Num + ":" +"ship"+"\t"+"\t"+ mangtam[i] + "\t" + "->" + "\t" + ltemp + "\r\n";
+                else Str1 += "Time " + Num + ":" + "tempyard" + "\t"+ mangtam[i] + "\t" + "->" + "\t" + ltemp + "\r\n";
+                temp.Push(mangtam[i]);
+
             }
             A.Add(temp);
             ltemp++;
