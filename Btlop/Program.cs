@@ -34,21 +34,16 @@ namespace Btlop
                 string str = a.Str;
                 Console.WriteLine(str);
                 int so_hang_ben_storage = nhap.Heightyard;
-                n = a.totalvessel(so_hang_ben_storage);
+                n = nhap.Containers / so_hang_ben_storage;
                 for (int i = 0; i <= n; i++)
                 {
                     List<double> tam = a.grab1(so_hang_ben_storage);
                     b.catching(tam);
-
                     b.sapxep();
-
                 }
                 Console.WriteLine("sap xep nhu sau");
-
                 long end = (long)(DateTime.UtcNow - Jan1st1970).TotalMilliseconds;
-
-                nhap.saveFile(b,a, "ketqua.txt", (end - bg) * 0.001);
-                
+                nhap.saveFile(b,a, "ketqua.txt", (end - bg) * 0.001);             
             }
             Console.ReadKey();
         }

@@ -21,17 +21,17 @@ namespace Btlop
                 A1[i] = new Stack<double>();
 
         }
-        public int totalvessel(int n)
-        {
-            int tong = 0;
-            foreach (Stack<double> i in A1)
-            {
-                tong = tong + i.Count<double>();
-            }
-            tong = tong / n;
+        //public int totalvessel(int n)
+        //{
+        //    int tong = 0;
+        //    foreach (Stack<double> i in A1)
+        //    {
+        //        tong = tong + i.Count<double>();
+        //    }
+        //    tong = tong / n;
             
-            return tong ;
-        }
+        //    return tong ;
+        //}
         //public void in_vessel()
         //{
 
@@ -71,8 +71,7 @@ namespace Btlop
                     }
                     if (dem == n) break;
                     dem2++;
-                    if (demstack == 0) dem2 = 0;
-                    
+                    if (demstack == 0) dem2 = 0;                   
                 }
                 if (dem2 > n) break;
                 if (dem3 > n) break;

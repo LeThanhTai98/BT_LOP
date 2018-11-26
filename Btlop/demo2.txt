@@ -2,7 +2,7 @@
 //ship
 4//height
 10//columns
-25//containers
+21//containers
 //yard
 5//height
 //containers

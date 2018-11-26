@@ -15,7 +15,7 @@ c10	32	33.5
 //OUTPUT
 21//Total Cost of moving
 0//Cost of moving to Temporary Yard
-0.099s//Total Cost of moving
+0.787s//Total Cost of moving
 //Containers Position in Main Yard
 	c1	c2	c3	c4	c5
 r1	1	6	13	11	22.1	
