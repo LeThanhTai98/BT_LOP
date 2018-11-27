@@ -45,7 +45,7 @@ namespace Btlop
                 }
                 else
                 {
-                    int temp = nhap.Heightyard - nhap.Column;
+                    int temp = nhap.Heightyard - nhap.Column + 1;
                     int column;
                     column = nhap.Column;
                     a.A1 = nhap.Stacks;

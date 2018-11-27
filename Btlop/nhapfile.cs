@@ -20,7 +20,7 @@ using System.Text.RegularExpressions;
         
         public void im()
         {
-            for (int i = 0; i < column; i++)
+            for (int i = 0; i < column-1; i++)
             {
                 Stack<double> k = new Stack<double>();
                 Stacks.Add(k);
@@ -79,7 +79,7 @@ using System.Text.RegularExpressions;
                             if (word[i] == ("columns"))
                             {
                                 number = Convert.ToInt32(word[0]);
-                                Column = number + 1;
+                                Column = number +1;
                             }
                             if (word[i] == ("containers"))
                             {
@@ -140,41 +140,42 @@ using System.Text.RegularExpressions;
                         int numbers = 0;
                         bool success;
                         this.im();
-                        for (int i = 0; i < Column; i++)
+                        for (int i = 1; i < Column; i++)
                         {
 
-
-                            for (int j = Height - 1; j >= 0; j--)
-                            {
-
-                                success = Int32.TryParse(tempString[j, i], out numbers);
-                                if (success)
+                           
+                            
+                                for (int j = Height - 1; j >= 0; j--)
                                 {
-                                    int tempNum = numbers;
-                                    double tempNum2 = 0;
-                                    if (same.Count == 0) same.Add(tempNum);
-                                    else
+                                Console.WriteLine(tempString[j, i]);
+                                    success = Int32.TryParse(tempString[j, i], out numbers);
+                                    if (success)
                                     {
-                                        foreach (int a in same)
+                                        int tempNum = numbers;
+                                        double tempNum2 = 0;
+                                        if (same.Count == 0) same.Add(tempNum);
+                                        else
                                         {
-                                            if (tempNum == a)
+                                            foreach (int a in same)
                                             {
-                                                if (tempNum2 == 0)
+                                                if (tempNum == a)
                                                 {
-                                                    tempNum2 = Convert.ToDouble(tempNum);
-                                                    tempNum2 += 0.1;
+                                                    if (tempNum2 == 0)
+                                                    {
+                                                        tempNum2 = Convert.ToDouble(tempNum);
+                                                        tempNum2 += 0.1;
+                                                    }
+                                                    else tempNum2 += 0.1;
                                                 }
-                                                else tempNum2 += 0.1;
-                                            }
-                                            
-                                        }
-                                         same.Add(tempNum);
-                                    }
-                                    if (tempNum2 == 0) Stacks[i].Push(numbers);
-                                    else stacks[i].Push(tempNum2);
-                                }
-                            }
 
+                                            }
+                                            same.Add(tempNum);
+                                        }
+                                        if (tempNum2 == 0) Stacks[i-1].Push(numbers);
+                                        else stacks[i-1].Push(tempNum2);
+                                    }
+                                }
+                            
                         }
                         sr.Close();
                     }

@@ -53,8 +53,7 @@ namespace Btlop
 
         public List<double> grab1(int n)
         {
-            int k = A1.Count<Stack<double>>();
-            
+            int k = A1.Count<Stack<double>>(); 
             List<double> tam = new List<double>();
             int dem = 0, dem2 = 0, dem3 = 0;
             while (dem < n)
@@ -116,16 +115,16 @@ namespace Btlop
             int k = 0;
             foreach (Stack<double> i in A1)
             {
-
-                Str += ("c" + k + "\t");
                 k++;
+                Str += ("\r\n" +"c" + k + "\t");
+                
                 foreach (double j in i)
                 {
 
                     Str += (j + "\t");
                 }
 
-                Str += ("\r\n");
+                
             }
 
 
