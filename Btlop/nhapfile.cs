@@ -147,7 +147,7 @@ using System.Text.RegularExpressions;
                             
                                 for (int j = Height - 1; j >= 0; j--)
                                 {
-                                Console.WriteLine(tempString[j, i]);
+                                
                                     success = Int32.TryParse(tempString[j, i], out numbers);
                                     if (success)
                                     {
