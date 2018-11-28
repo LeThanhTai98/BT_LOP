@@ -171,8 +171,12 @@ using System.Text.RegularExpressions;
                                             }
                                             same.Add(tempNum);
                                         }
-                                        if (trung == 0) Stacks[i-1].Push(numbers);
-                                        else return;
+                                    if (trung == 0)
+                                    {
+
+                                        Stacks[i - 1].Push(numbers);
+                                    }
+                                    else return;
                                     }
                                 }
                             

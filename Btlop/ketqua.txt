@@ -207,3 +207,141 @@ Time 29:tempyard	29	->	2
 Time 30:ship		28	->	2
 Time 31:tempyard	27	->	2
 Time 32:tempyard	11	->	2
+
+//INPUT
+c1	5	13	11	
+c2	1	31	27	37	
+c3	20	32	28	
+c4	22	24	
+c5	12	33	
+c6	25	
+c7	6	29	
+c8	34	35	
+c9	36	
+c10	39	40	
+
+//OUTPUT
+32//Total Cost of moving
+10//Cost of moving to Temporary Yard
+//Containers Temporary Yard
+5	1	20	22	12	29	35	40	11	27	
+0.052s//Total Cost of moving
+//Containers Position in Main Yard
+	c1	c2
+r1	1	11	
+r2	5	27	
+r3	6	28	
+r4	12	29	
+r5	13	35	
+r6	20	37	
+r7	22	40	
+r8	24	x	
+r9	25	x	
+r10	31	x	
+r11	32	x	
+r12	33	x	
+r13	34	x	
+r14	36	x	
+r15	39	x	
+//Schedule of Moving
+Time 1:ship	5	->	tempyard
+Time 2:ship	1	->	tempyard
+Time 3:ship	20	->	tempyard
+Time 4:ship	22	->	tempyard
+Time 5:ship	12	->	tempyard
+Time 6:ship		39	->	1
+Time 7:ship		36	->	1
+Time 8:ship		34	->	1
+Time 9:ship		33	->	1
+Time 10:ship		32	->	1
+Time 11:ship		31	->	1
+Time 12:ship		25	->	1
+Time 13:ship		24	->	1
+Time 14:tempyard	22	->	1
+Time 15:tempyard	20	->	1
+Time 16:ship		13	->	1
+Time 17:tempyard	12	->	1
+Time 18:ship		6	->	1
+Time 19:tempyard	5	->	1
+Time 20:tempyard	1	->	1
+Time 1:ship	29	->	tempyard
+Time 2:ship	35	->	tempyard
+Time 3:ship	40	->	tempyard
+Time 4:ship	11	->	tempyard
+Time 5:ship	27	->	tempyard
+Time 26:tempyard	40	->	2
+Time 27:ship		37	->	2
+Time 28:tempyard	35	->	2
+Time 29:tempyard	29	->	2
+Time 30:ship		28	->	2
+Time 31:tempyard	27	->	2
+Time 32:tempyard	11	->	2
+
+//INPUT
+c1	5	13	11	
+c2	1	31	27	37	
+c3	20	32	28	
+c4	22	24	
+c5	12	33	
+c6	25	
+c7	6	29	
+c8	34	35	
+c9	36	
+c10	39	40	
+
+//OUTPUT
+32//Total Cost of moving
+10//Cost of moving to Temporary Yard
+//Containers Temporary Yard
+5	1	20	22	12	29	35	40	11	27	
+0.039s//Total Cost of moving
+//Containers Position in Main Yard
+	c1	c2
+r1	1	11	
+r2	5	27	
+r3	6	28	
+r4	12	29	
+r5	13	35	
+r6	20	37	
+r7	22	40	
+r8	24	x	
+r9	25	x	
+r10	31	x	
+r11	32	x	
+r12	33	x	
+r13	34	x	
+r14	36	x	
+r15	39	x	
+//Schedule of Moving
+Time 1:ship	5	->	tempyard
+Time 2:ship	1	->	tempyard
+Time 3:ship	20	->	tempyard
+Time 4:ship	22	->	tempyard
+Time 5:ship	12	->	tempyard
+Time 6:ship		39	->	1
+Time 7:ship		36	->	1
+Time 8:ship		34	->	1
+Time 9:ship		33	->	1
+Time 10:ship		32	->	1
+Time 11:ship		31	->	1
+Time 12:ship		25	->	1
+Time 13:ship		24	->	1
+Time 14:tempyard	22	->	1
+Time 15:tempyard	20	->	1
+Time 16:ship		13	->	1
+Time 17:tempyard	12	->	1
+Time 18:ship		6	->	1
+Time 19:tempyard	5	->	1
+Time 20:tempyard	1	->	1
+Time 1:ship	29	->	tempyard
+Time 2:ship	35	->	tempyard
+Time 3:ship	40	->	tempyard
+Time 4:ship	11	->	tempyard
+Time 5:ship	27	->	tempyard
+Time 26:tempyard	40	->	2
+Time 27:ship		37	->	2
+Time 28:tempyard	35	->	2
+Time 29:tempyard	29	->	2
+Time 30:ship		28	->	2
+Time 31:tempyard	27	->	2
+Time 32:tempyard	11	->	2
