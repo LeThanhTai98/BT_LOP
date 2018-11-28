@@ -9,23 +9,24 @@ namespace Btlop
     class temp
     {
         int tempnum = 0;
-        List<double> mangtemp = new List<double>();
+        List<container> mangtemp = new List<container>();
 
-        public List<double> Mangtemp { get => mangtemp; set => mangtemp = value; }
+       
         public string Strtemp { get => strtemp; set => strtemp = value; }
         public int Tempnum { get => tempnum; set => tempnum = value; }
         public string Strtemp1 { get => strtemp1; set => strtemp1 = value; }
+        internal List<container> Mangtemp { get => mangtemp; set => mangtemp = value; }
 
         string strtemp1 = "";
         string strtemp = "";
-        public void printtemp(List<double> a)
+        public void printtemp(List<container> a)
         {
             for (int i = 0; i < a.Count; i++)
             {
-                strtemp += (a[i] + "\t");
+                strtemp += (a[i].Sohieu + "\t");
                 
                 tempnum++;
-                strtemp1 += ("Time " + Tempnum + ":" + "ship" + "\t" + a[i] + "\t" + "->" + "\t" + "tempyard" + "\r\n");
+                strtemp1 += ("Time " + Tempnum + ":" + "ship" + "\t" + a[i].Sohieu + "\t" + "->" + "\t" + "tempyard" + "\r\n");
             }
         }
         

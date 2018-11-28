@@ -10,19 +10,19 @@ namespace Btlop
 
     {
         //Stack<int> [] A= new Stack<int>[99];
-        List<Stack<double>> A = new List<Stack<double>>();
+        List<Stack<container>> A = new List<Stack<container>>();
         int num = 0;
         int ltemp = 1;
         string str1 = "";
         int tempnum = 0;
-        List<double> mangtam = new List<double>();
+        List<container> mangtam = new List<container>();
         List<int> tam = new List<int>();
 
         public string Str1 { get => str1; set => str1 = value; }
         public int Num { get => num; set => num = value; }
         public int Tempnum { get => tempnum; set => tempnum = value; }
 
-        public void catching(List<double> tam)
+        public void catching(List<container> tam)
         {
             mangtam = tam;
         }
@@ -30,20 +30,20 @@ namespace Btlop
         {
             
             int dem = 0;
-            dem = mangtam.Count<double>() ;
+            dem = mangtam.Count<container>() ;
             for (int i = 0; i < dem; i++)
                 for (int j = 0; j < dem; j++)
-                    if (mangtam[i] > mangtam[j])
+                    if (mangtam[i].Sohieu > mangtam[j].Sohieu)
                     {
-                        double tam2 = mangtam[i];
+                        container tam2 = mangtam[i];
                         mangtam[i] = mangtam[j];
                         mangtam[j] = tam2;
                     }
-            Stack<double> temp = new Stack<double>();
+            Stack<container> temp = new Stack<container>();
             for (int i = 0; i < dem; i++)
             {
                 Num++;
-                Str1 += "Time " + Num + ":\t" + mangtam[i] + "\t" + "->" + "\t" + ltemp + "\r\n";
+                Str1 += "Time " + Num + ":\t" + mangtam[i].Sohieu + "\t" + "->" + "\t" + ltemp + "\r\n";
                 temp.Push(mangtam[i]);
                
                 
@@ -62,13 +62,13 @@ namespace Btlop
             }
             for (int i = 0; i < dem; i++)
                 for (int j = 0; j < dem; j++)
-                    if (mangtam[i] > mangtam[j])
+                    if (mangtam[i].Sohieu > mangtam[j].Sohieu)
                     {
-                        double tam2 = mangtam[i];
+                        container tam2 = mangtam[i];
                         mangtam[i] = mangtam[j];
                         mangtam[j] = tam2;
                     }
-            Stack<double> temp = new Stack<double>();
+            Stack<container> temp = new Stack<container>();
             num += c.Tempnum;
             str1 += c.Strtemp1;
             tempnum += c.Tempnum;
@@ -80,8 +80,8 @@ namespace Btlop
                 {
                     if (mangtam[i] == c.Mangtemp[j]) dem2++;
                 }
-                if (dem2 == 0)  Str1 += "Time " + Num + ":" +"ship"+"\t"+"\t"+ mangtam[i] + "\t" + "->" + "\t" + ltemp + "\r\n";
-                else Str1 += "Time " + Num + ":" + "tempyard" + "\t"+ mangtam[i] + "\t" + "->" + "\t" + ltemp + "\r\n";
+                if (dem2 == 0)  Str1 += "Time " + Num + ":" +"ship"+"\t"+"\t"+ mangtam[i].Sohieu + "\t" + "->" + "\t" + ltemp + "\r\n";
+                else Str1 += "Time " + Num + ":" + "tempyard" + "\t"+ mangtam[i].Sohieu + "\t" + "->" + "\t" + ltemp + "\r\n";
                 temp.Push(mangtam[i]);
 
             }
@@ -94,9 +94,9 @@ namespace Btlop
         {
             String str = "";
             int tong = 0;
-            foreach (Stack<double> a in A)
+            foreach (Stack<container> a in A)
             {
-                if (a.Count<double>() > tong) tong = a.Count<double>();
+                if (a.Count<container>() > tong) tong = a.Count<container>();
             }
             for (int i = 1; i <= A.Count; i++)
             {
@@ -109,11 +109,11 @@ namespace Btlop
             {
                 str += "\r\n" + "r" + i + "\t";
                 int dem = 0;
-                 foreach (Stack<double> a in A)
+                 foreach (Stack<container> a in A)
                 {
-                    if (a.Count<double>() != 0)
+                    if (a.Count<container>() != 0)
                     {
-                        str += (a.Pop() + "\t");
+                        str += (a.Pop().Sohieu + "\t");
                         dem++;
                     }
                     

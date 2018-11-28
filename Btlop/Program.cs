@@ -35,7 +35,7 @@ namespace Btlop
                         n = nhap.Containers / nhap.Heightyard;
                         for (int i = 0; i <= n; i++)
                         {
-                            List<double> tam = a.grab1(nhap.Heightyard);
+                            List<container> tam = a.grab1(nhap.Heightyard);
                             b.catching(tam);
                             b.sapxep();
                         }
@@ -53,8 +53,8 @@ namespace Btlop
                         n = nhap.Containers / nhap.Heightyard;
                         for (int i = 0; i <= n; i++)
                         {
-                            List<double> tam = a.grab1(temp);
-                            List<double> tam2 = a.grab1(nhap.Column-1);
+                            List<container> tam = a.grab1(temp);
+                            List<container> tam2 = a.grab1(nhap.Column-1);
                             c.printtemp(tam);
                             c.Mangtemp = tam;
                             b.catching(tam2);                           

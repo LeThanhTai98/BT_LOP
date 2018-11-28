@@ -16,13 +16,13 @@ using System.Text.RegularExpressions;
         int containers = 0;
         int heightyard = 0;
         List<int> same = new List<int>();
-        List<Stack<double>> stacks = new List<Stack<double>>();
+        List<Stack<container>> stacks = new List<Stack<container>>();
         int trung = 0;
         public void im()
         {
             for (int i = 0; i < column-1; i++)
             {
-                Stack<double> k = new Stack<double>();
+                Stack<container> k = new Stack<container>();
                 Stacks.Add(k);
             }
         }
@@ -43,8 +43,9 @@ using System.Text.RegularExpressions;
         public int Height { get => height; set => height = value; }
         public int Containers { get => containers; set => containers = value; }
         public int Heightyard { get => heightyard; set => heightyard = value; }
-        public List<Stack<double>> Stacks { get => stacks; set => stacks = value; }
+        
         public int Trung { get => trung; set => trung = value; }
+        internal List<Stack<container>> Stacks { get => stacks; set => stacks = value; }
 
         private String pathProject ;
         
@@ -173,8 +174,10 @@ using System.Text.RegularExpressions;
                                         }
                                     if (trung == 0)
                                     {
+                                        container a = new container();
+                                        a.Sohieu = numbers;
 
-                                        Stacks[i - 1].Push(numbers);
+                                        Stacks[i - 1].Push(a);
                                     }
                                     else return;
                                     }
@@ -226,16 +229,16 @@ using System.Text.RegularExpressions;
             }
             Console.WriteLine("Success...");
         }
-        public void xuat()
-        {
-            for (int i = 0; i < Column; i++)
-            {
-                foreach (int a in Stacks[i])
-                {
-                    Console.Write(a + " ");
-                }
-                Console.WriteLine();
-            }
-        }
+        //public void xuat()
+        //{
+        //    for (int i = 0; i < Column; i++)
+        //    {
+        //        foreach (int a in Stacks[i])
+        //        {
+        //            Console.Write(a + " ");
+        //        }
+        //        Console.WriteLine();
+        //    }
+        //}
     }
 }

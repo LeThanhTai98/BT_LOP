@@ -8,17 +8,18 @@ namespace Btlop
 {
     class vessel
     {
-        List<Stack<double>> A = new List<Stack<double>>();
+        List<Stack<container>> A = new List<Stack<container>>();
         int demstack = 0;
         string str = "";
 
-        public List<Stack<double>> A1 { get => A; set => A = value; }
+        
         public string Str { get => str; set => str = value; }
+        internal List<Stack<container>> A1 { get => A; set => A = value; }
 
         public void create_vessel(int soluong)
         {
             for (int i = 0; i <= soluong; i++)
-                A1[i] = new Stack<double>();
+                A1[i] = new Stack<container>();
 
         }
         //public int totalvessel(int n)
@@ -51,18 +52,18 @@ namespace Btlop
         //}
 
 
-        public List<double> grab1(int n)
+        public List<container> grab1(int n)
         {
-            int k = A1.Count<Stack<double>>(); 
-            List<double> tam = new List<double>();
+            int k = A1.Count<Stack<container>>(); 
+            List<container> tam = new List<container>();
             int dem = 0, dem2 = 0, dem3 = 0;
             while (dem < n)
             {
                 
-                    foreach (Stack<double> i in A1)
+                    foreach (Stack<container> i in A1)
                 {
-                    if (i.Count<double>() == 0 && dem2 == demstack) demstack++;
-                    if (i.Count<double>() != 0 && dem2 == demstack)
+                    if (i.Count<container>() == 0 && dem2 == demstack) demstack++;
+                    if (i.Count<container>() != 0 && dem2 == demstack)
                     {
                         tam.Add(i.Pop());
                         dem++; demstack++;
@@ -113,15 +114,15 @@ namespace Btlop
         public void showvessel()
         {
             int k = 0;
-            foreach (Stack<double> i in A1)
+            foreach (Stack<container> i in A1)
             {
                 k++;
                 Str += ("\r\n" +"c" + k + "\t");
                 
-                foreach (double j in i)
+                foreach (container j in i)
                 {
 
-                    Str += (j + "\t");
+                    Str += (j.Sohieu + "\t");
                 }
 
                 
