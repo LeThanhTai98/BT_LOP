@@ -17,7 +17,7 @@ using System.Text.RegularExpressions;
         int heightyard = 0;
         List<int> same = new List<int>();
         List<Stack<double>> stacks = new List<Stack<double>>();
-        
+        int trung = 0;
         public void im()
         {
             for (int i = 0; i < column-1; i++)
@@ -44,8 +44,7 @@ using System.Text.RegularExpressions;
         public int Containers { get => containers; set => containers = value; }
         public int Heightyard { get => heightyard; set => heightyard = value; }
         public List<Stack<double>> Stacks { get => stacks; set => stacks = value; }
-
-        
+        public int Trung { get => trung; set => trung = value; }
 
         private String pathProject ;
         
@@ -160,19 +159,20 @@ using System.Text.RegularExpressions;
                                             {
                                                 if (tempNum == a)
                                                 {
-                                                    if (tempNum2 == 0)
-                                                    {
-                                                        tempNum2 = Convert.ToDouble(tempNum);
-                                                        tempNum2 += 0.1;
-                                                    }
-                                                    else tempNum2 += 0.1;
+                                                //if (tempNum2 == 0)
+                                                //{
+                                                //    tempNum2 = Convert.ToDouble(tempNum);
+                                                //    tempNum2 += 0.1;
+                                                //}
+                                                //else tempNum2 += 0.1;
+                                                trung++;
                                                 }
 
                                             }
                                             same.Add(tempNum);
                                         }
-                                        if (tempNum2 == 0) Stacks[i-1].Push(numbers);
-                                        else stacks[i-1].Push(tempNum2);
+                                        if (trung == 0) Stacks[i-1].Push(numbers);
+                                        else return;
                                     }
                                 }
                             
