@@ -27,7 +27,7 @@ namespace Btlop
             if (nhap.Containers != 0)
                 if (nhap.Trung == 0)
                 {
-                    if (nhap.Heightyard <= nhap.Column)
+                    if (nhap.Heightyard <= nhap.Column-1)
                     {
                         int column;
                         column = nhap.Column;
@@ -48,6 +48,7 @@ namespace Btlop
                     }
                     else
                     {
+                        Console.WriteLine("truong hop 2");
                         int temp = nhap.Heightyard - nhap.Column + 1;
                         int column;
                         column = nhap.Column;
@@ -60,10 +61,11 @@ namespace Btlop
                         for (int i = 0; i <= n; i++)
                         {
                             List<double> tam = a.grab1(temp);
-                            List<double> tam2 = a.grab1(nhap.Column);
+                            List<double> tam2 = a.grab1(nhap.Column-1);
                             c.printtemp(tam);
                             c.Mangtemp = tam;
                             b.catching(tam2);
+                            
                             b.sapxep2(c);
                         }
                         long end = (long)(DateTime.UtcNow - Jan1st1970).TotalMilliseconds;

@@ -14,12 +14,13 @@ namespace Btlop
         int num = 0;
         int ltemp = 1;
         string str1 = "";
-        
+        int tempnum = 0;
         List<double> mangtam = new List<double>();
         List<int> tam = new List<int>();
 
         public string Str1 { get => str1; set => str1 = value; }
         public int Num { get => num; set => num = value; }
+        public int Tempnum { get => tempnum; set => tempnum = value; }
 
         public void catching(List<double> tam)
         {
@@ -68,6 +69,9 @@ namespace Btlop
                         mangtam[j] = tam2;
                     }
             Stack<double> temp = new Stack<double>();
+            num += c.Tempnum;
+            str1 += c.Strtemp1;
+            tempnum += c.Tempnum;
             for (int i = 0; i < dem; i++)
             {
                 Num++;
@@ -82,6 +86,8 @@ namespace Btlop
 
             }
             A.Add(temp);
+            c.Tempnum = 0;
+            c.Strtemp1 = "";
             ltemp++;
         }
         public string showstorage()

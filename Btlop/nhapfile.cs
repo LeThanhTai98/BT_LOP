@@ -206,7 +206,7 @@ using System.Text.RegularExpressions;
                     file.Write("\r\n" + "//INPUT" + v.Str + "\r\n");
                     file.Write("\r\n" + "//OUTPUT" + "\r\n");
                     file.Write((y.Num+t.Tempnum) + "//Total Cost of moving" + "\r\n");
-                    file.Write(t.Tempnum+"//Cost of moving to Temporary Yard" + "\r\n");
+                    file.Write(y.Tempnum+"//Cost of moving to Temporary Yard" + "\r\n");
                     file.Write( "//Containers Temporary Yard" +"\r\n"+ t.Strtemp+ "\r\n");
                     file.Write(ti + "s//Total Cost of moving" + "\r\n");
                     file.Write("//Containers Position in Main Yard" + "\r\n");
