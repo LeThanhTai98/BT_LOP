@@ -1,8 +1,8 @@
 
 //INPUT
-c1	5	13	11	
-c2	1	31	27	37	
-c3	20	32	28	
+c1	60	13	11	
+c2	90	31	27	37	
+c3	100	32	28	
 c4	22	24	
 c5	12	33	
 c6	25	
@@ -12,66 +12,46 @@ c9	36
 c10	39	40	
 
 //OUTPUT
-32//Total Cost of moving
-10//Cost of moving to Temporary Yard
+22//Total Cost of moving
+0//Cost of moving to Temporary Yard
 //Containers Temporary Yard
-Btlop.container	Btlop.container	Btlop.container	Btlop.container	Btlop.container	Btlop.container	Btlop.container	Btlop.container	Btlop.container	Btlop.container	
-0.206s//Total Cost of moving
+
+0.082s//Total Cost of moving
 //Containers Position in Main Yard
-	c1	c2
-r1	1	11	
-r2	5	27	
-r3	6	28	
-r4	12	29	
-r5	13	35	
-r6	20	37	
-r7	22	40	
-r8	24	x	
-r9	25	x	
-r10	31	x	
-r11	32	x	
-r12	33	x	
-r13	34	x	
-r14	36	x	
-r15	39	x	
+	c1	c2	c3	c4	c5	c6
+r1	12	6	13	29	11	37	
+r2	22	25	24	35	27	x	
+r3	60	34	31	40	28	x	
+r4	90	36	32	x	x	x	
+r5	100	39	33	x	x	x	
 //Schedule of Moving
-Time 1:ship	Btlop.container	->	tempyard
-Time 2:ship	Btlop.container	->	tempyard
-Time 3:ship	Btlop.container	->	tempyard
-Time 4:ship	Btlop.container	->	tempyard
-Time 5:ship	Btlop.container	->	tempyard
-Time 6:ship		39	->	1
-Time 7:ship		36	->	1
-Time 8:ship		34	->	1
-Time 9:ship		33	->	1
-Time 10:ship		32	->	1
-Time 11:ship		31	->	1
-Time 12:ship		25	->	1
-Time 13:ship		24	->	1
-Time 14:tempyard	22	->	1
-Time 15:tempyard	20	->	1
-Time 16:ship		13	->	1
-Time 17:tempyard	12	->	1
-Time 18:ship		6	->	1
-Time 19:tempyard	5	->	1
-Time 20:tempyard	1	->	1
-Time 1:ship	Btlop.container	->	tempyard
-Time 2:ship	Btlop.container	->	tempyard
-Time 3:ship	Btlop.container	->	tempyard
-Time 4:ship	Btlop.container	->	tempyard
-Time 5:ship	Btlop.container	->	tempyard
-Time 26:tempyard	40	->	2
-Time 27:ship		37	->	2
-Time 28:tempyard	35	->	2
-Time 29:tempyard	29	->	2
-Time 30:ship		28	->	2
-Time 31:tempyard	27	->	2
-Time 32:tempyard	11	->	2
+Time 1:	100	->	1
+Time 2:	90	->	1
+Time 3:	60	->	1
+Time 4:	22	->	1
+Time 5:	12	->	1
+Time 6:	39	->	2
+Time 7:	36	->	2
+Time 8:	34	->	2
+Time 9:	25	->	2
+Time 10:	6	->	2
+Time 11:	33	->	3
+Time 12:	32	->	3
+Time 13:	31	->	3
+Time 14:	24	->	3
+Time 15:	13	->	3
+Time 16:	40	->	4
+Time 17:	35	->	4
+Time 18:	29	->	4
+Time 19:	28	->	5
+Time 20:	27	->	5
+Time 21:	11	->	5
+Time 22:	37	->	6
 
 //INPUT
-c1	5	13	11	
-c2	1	31	27	37	
-c3	20	32	28	
+c1	60	13	11	
+c2	90	31	27	37	
+c3	100	32	28	
 c4	22	24	
 c5	12	33	
 c6	25	
@@ -81,58 +61,210 @@ c9	36
 c10	39	40	
 
 //OUTPUT
-32//Total Cost of moving
-10//Cost of moving to Temporary Yard
+22//Total Cost of moving
+0//Cost of moving to Temporary Yard
 //Containers Temporary Yard
-5	1	20	22	12	29	35	40	11	27	
-0.079s//Total Cost of moving
+
+0.072s//Total Cost of moving
 //Containers Position in Main Yard
-	c1	c2
-r1	1	11	
-r2	5	27	
-r3	6	28	
-r4	12	29	
-r5	13	35	
-r6	20	37	
-r7	22	40	
-r8	24	x	
-r9	25	x	
-r10	31	x	
-r11	32	x	
-r12	33	x	
-r13	34	x	
-r14	36	x	
-r15	39	x	
+	c1	c2	c3	c4
+r1	6	13	11	37	
+r2	12	24	27	x	
+r3	22	29	28	x	
+r4	25	31	x	x	
+r5	34	32	x	x	
+r6	36	33	x	x	
+r7	39	35	x	x	
+r8	60	40	x	x	
+r9	90	x	x	x	
+r10	100	x	x	x	
 //Schedule of Moving
-Time 1:ship	5	->	tempyard
-Time 2:ship	1	->	tempyard
-Time 3:ship	20	->	tempyard
-Time 4:ship	22	->	tempyard
-Time 5:ship	12	->	tempyard
-Time 6:ship		39	->	1
-Time 7:ship		36	->	1
-Time 8:ship		34	->	1
-Time 9:ship		33	->	1
-Time 10:ship		32	->	1
-Time 11:ship		31	->	1
-Time 12:ship		25	->	1
-Time 13:ship		24	->	1
-Time 14:tempyard	22	->	1
-Time 15:tempyard	20	->	1
-Time 16:ship		13	->	1
-Time 17:tempyard	12	->	1
-Time 18:ship		6	->	1
-Time 19:tempyard	5	->	1
-Time 20:tempyard	1	->	1
-Time 1:ship	29	->	tempyard
-Time 2:ship	35	->	tempyard
-Time 3:ship	40	->	tempyard
-Time 4:ship	11	->	tempyard
-Time 5:ship	27	->	tempyard
-Time 26:tempyard	40	->	2
-Time 27:ship		37	->	2
-Time 28:tempyard	35	->	2
-Time 29:tempyard	29	->	2
-Time 30:ship		28	->	2
-Time 31:tempyard	27	->	2
-Time 32:tempyard	11	->	2
+Time 1:	100	->	1
+Time 2:	90	->	1
+Time 3:	60	->	1
+Time 4:	39	->	1
+Time 5:	36	->	1
+Time 6:	34	->	1
+Time 7:	25	->	1
+Time 8:	22	->	1
+Time 9:	12	->	1
+Time 10:	6	->	1
+Time 11:	40	->	2
+Time 12:	35	->	2
+Time 13:	33	->	2
+Time 14:	32	->	2
+Time 15:	31	->	2
+Time 16:	29	->	2
+Time 17:	24	->	2
+Time 18:	13	->	2
+Time 19:	28	->	3
+Time 20:	27	->	3
+Time 21:	11	->	3
+Time 22:	37	->	4
+
+//INPUT
+c1	60	13	11	
+c2	90	31	27	37	
+c3	100	32	28	
+c4	22	24	
+c5	12	33	
+c6	25	
+c7	6	29	
+c8	34	35	
+c9	36	
+c10	39	40	
+
+//OUTPUT
+22//Total Cost of moving
+0//Cost of moving to Temporary Yard
+//Containers Temporary Yard
+
+0.059s//Total Cost of moving
+//Containers Position in Main Yard
+	c1	c2	c3	c4
+r1	6	13	11	37	
+r2	12	24	27	x	
+r3	22	29	28	x	
+r4	25	31	x	x	
+r5	34	32	x	x	
+r6	36	33	x	x	
+r7	39	35	x	x	
+r8	60	40	x	x	
+r9	90	x	x	x	
+r10	100	x	x	x	
+//Schedule of Moving
+Time 1:	100	->	1
+Time 2:	90	->	1
+Time 3:	60	->	1
+Time 4:	39	->	1
+Time 5:	36	->	1
+Time 6:	34	->	1
+Time 7:	25	->	1
+Time 8:	22	->	1
+Time 9:	12	->	1
+Time 10:	6	->	1
+Time 11:	40	->	2
+Time 12:	35	->	2
+Time 13:	33	->	2
+Time 14:	32	->	2
+Time 15:	31	->	2
+Time 16:	29	->	2
+Time 17:	24	->	2
+Time 18:	13	->	2
+Time 19:	28	->	3
+Time 20:	27	->	3
+Time 21:	11	->	3
+Time 22:	37	->	4
+
+//INPUT
+c1	60	13	11	
+c2	90	31	27	37	
+c3	100	32	28	
+c4	22	24	
+c5	12	33	
+c6	25	
+c7	6	29	
+c8	34	35	
+c9	36	
+c10	39	40	
+
+//OUTPUT
+22//Total Cost of moving
+0//Cost of moving to Temporary Yard
+//Containers Temporary Yard
+
+0.064s//Total Cost of moving
+//Containers Position in Main Yard
+	c1	c2	c3	c4
+r1	6	13	11	37	
+r2	12	24	27	x	
+r3	22	29	28	x	
+r4	25	31	x	x	
+r5	34	32	x	x	
+r6	36	33	x	x	
+r7	39	35	x	x	
+r8	60	40	x	x	
+r9	90	x	x	x	
+r10	100	x	x	x	
+//Schedule of Moving
+Time 1:	100	->	1
+Time 2:	90	->	1
+Time 3:	60	->	1
+Time 4:	39	->	1
+Time 5:	36	->	1
+Time 6:	34	->	1
+Time 7:	25	->	1
+Time 8:	22	->	1
+Time 9:	12	->	1
+Time 10:	6	->	1
+Time 11:	40	->	2
+Time 12:	35	->	2
+Time 13:	33	->	2
+Time 14:	32	->	2
+Time 15:	31	->	2
+Time 16:	29	->	2
+Time 17:	24	->	2
+Time 18:	13	->	2
+Time 19:	28	->	3
+Time 20:	27	->	3
+Time 21:	11	->	3
+Time 22:	37	->	4
+
+//INPUT
+c1	60	13	11	
+c2	90	31	27	37	
+c3	100	32	28	
+c4	22	24	
+c5	12	33	
+c6	25	
+c7	6	29	
+c8	34	35	
+c9	36	
+c10	39	40	
+
+//OUTPUT
+22//Total Cost of moving
+0//Cost of moving to Temporary Yard
+//Containers Temporary Yard
+
+0.076s//Total Cost of moving
+//Containers Position in Main Yard
+	c1	c2	c3	c4
+r1	6	13	11	37	
+r2	12	24	27	x	
+r3	22	29	28	x	
+r4	25	31	x	x	
+r5	34	32	x	x	
+r6	36	33	x	x	
+r7	39	35	x	x	
+r8	60	40	x	x	
+r9	90	x	x	x	
+r10	100	x	x	x	
+r11	x	x	x	x	
+r12	x	x	x	x	
+r13	x	x	x	x	
+r14	x	x	x	x	
+r15	x	x	x	x	
+//Schedule of Moving
+Time 1:	100	->	1
+Time 2:	90	->	1
+Time 3:	60	->	1
+Time 4:	39	->	1
+Time 5:	36	->	1
+Time 6:	34	->	1
+Time 7:	25	->	1
+Time 8:	22	->	1
+Time 9:	12	->	1
+Time 10:	6	->	1
+Time 11:	40	->	2
+Time 12:	35	->	2
+Time 13:	33	->	2
+Time 14:	32	->	2
+Time 15:	31	->	2
+Time 16:	29	->	2
+Time 17:	24	->	2
+Time 18:	13	->	2
+Time 19:	28	->	3
+Time 20:	27	->	3
+Time 21:	11	->	3
+Time 22:	37	->	4

@@ -7,7 +7,7 @@
 15//height
 //containers
 	c1	c2	c3	c4	c5	c6	c7	c8	c9	c10
-r1	5	1	20	x	12	25	6	34	x	39
+r1	60	90	100	x	12	25	6	34	x	39
 r2	13	31	32	22	x	x	x	x	x	x
 r3	11	27	28	24	x	x	29	35	x	x
 r4	x	37	x	x	33	x	x	x	36	40

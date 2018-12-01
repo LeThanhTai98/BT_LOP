@@ -11,7 +11,7 @@ namespace Btlop
         List<Stack<container>> A = new List<Stack<container>>();
         int demstack = 0;
         string str = "";
-
+        
         
         public string Str { get => str; set => str = value; }
         internal List<Stack<container>> A1 { get => A; set => A = value; }
@@ -22,17 +22,18 @@ namespace Btlop
                 A1[i] = new Stack<container>();
 
         }
-        //public int totalvessel(int n)
-        //{
-        //    int tong = 0;
-        //    foreach (Stack<double> i in A1)
-        //    {
-        //        tong = tong + i.Count<double>();
-        //    }
-        //    tong = tong / n;
-            
-        //    return tong ;
-        //}
+       
+        public int totalvessel()
+        {
+            int tong = 0;
+            foreach (Stack<container> i in A1)
+            {
+                tong = tong + i.Count<container>();
+            }
+           
+
+            return tong;
+        }
         //public void in_vessel()
         //{
 
@@ -51,7 +52,6 @@ namespace Btlop
         //    }
         //}
 
-
         public List<container> grab1(int n)
         {
             int k = A1.Count<Stack<container>>(); 
@@ -67,11 +67,16 @@ namespace Btlop
                     {
                         tam.Add(i.Pop());
                         dem++; demstack++;
-                        if (demstack >= k) demstack = 0;
+                        if (demstack >= k) break;
                     }
                     if (dem == n) break;
                     dem2++;
                     if (demstack == 0) dem2 = 0;                   
+                }
+                if (demstack >= k)
+                {
+                    demstack = 0;
+                    break;
                 }
                 if (dem2 > n) break;
                 if (dem3 > n) break;
@@ -80,37 +85,7 @@ namespace Btlop
 
             return tam;
         }
-        //public List<double> grab2(int n)
-        //{
-        //    int k = A1.Count<Stack<double>>();
-
-        //    List<double> tam = new List<double>();
-        //    int dem = 0, dem2 = 0, dem3 = 0;
-        //    while (dem < n)
-        //    {
-
-        //        foreach (Stack<double> i in A1)
-        //        {
-        //            if (i.Count<double>() == 0 && dem2 == demstack) demstack++;
-        //            if (i.Count<double>() != 0 && dem2 == demstack)
-        //            {
-        //                tam.Add(i.Pop());
-        //                dem++; demstack++;
-        //                if (demstack >= k) demstack = 0;
-        //            }
-        //            if (dem == n) break;
-        //            dem2++;
-        //            if (demstack == 0) dem2 = 0;
-
-        //        }
-        //        if (dem2 > n) break;
-        //        if (dem3 > n) break;
-        //        dem3++;
-        //    }
-
-        //    return tam;
-        //}
-        //*************?
+       
         public void showvessel()
         {
             int k = 0;

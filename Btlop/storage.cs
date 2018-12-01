@@ -24,13 +24,13 @@ namespace Btlop
 
         public void catching(List<container> tam)
         {
+            mangtam = new List<container>();
             mangtam = tam;
         }
         public void sapxep()
-        {
-            
+        {          
             int dem = 0;
-            dem = mangtam.Count<container>() ;
+            dem = mangtam.Count ;
             for (int i = 0; i < dem; i++)
                 for (int j = 0; j < dem; j++)
                     if (mangtam[i].Sohieu > mangtam[j].Sohieu)
@@ -44,53 +44,51 @@ namespace Btlop
             {
                 Num++;
                 Str1 += "Time " + Num + ":\t" + mangtam[i].Sohieu + "\t" + "->" + "\t" + ltemp + "\r\n";
-                temp.Push(mangtam[i]);
-               
-                
+                temp.Push(mangtam[i]);               
             }
             A.Add(temp);
             ltemp++;
         }
-        public void sapxep2(temp c)
-        {
+        //public void sapxep2(temp c)
+        //{
 
-            int dem = 0;
-            dem = mangtam.Count + c.Mangtemp.Count;
-            for(int i = 0; i < c.Mangtemp.Count; i++)
-            {
-                mangtam.Add(c.Mangtemp[i]);
-            }
-            for (int i = 0; i < dem; i++)
-                for (int j = 0; j < dem; j++)
-                    if (mangtam[i].Sohieu > mangtam[j].Sohieu)
-                    {
-                        container tam2 = mangtam[i];
-                        mangtam[i] = mangtam[j];
-                        mangtam[j] = tam2;
-                    }
-            Stack<container> temp = new Stack<container>();
-            num += c.Tempnum;
-            str1 += c.Strtemp1;
-            tempnum += c.Tempnum;
-            for (int i = 0; i < dem; i++)
-            {
-                Num++;
-                int dem2 = 0;
-                for(int j = 0; j < c.Mangtemp.Count; j++)
-                {
-                    if (mangtam[i] == c.Mangtemp[j]) dem2++;
-                }
-                if (dem2 == 0)  Str1 += "Time " + Num + ":" +"ship"+"\t"+"\t"+ mangtam[i].Sohieu + "\t" + "->" + "\t" + ltemp + "\r\n";
-                else Str1 += "Time " + Num + ":" + "tempyard" + "\t"+ mangtam[i].Sohieu + "\t" + "->" + "\t" + ltemp + "\r\n";
-                temp.Push(mangtam[i]);
+        //    int dem = 0;
+        //    dem = mangtam.Count + c.Mangtemp.Count;
+        //    for(int i = 0; i < c.Mangtemp.Count; i++)
+        //    {
+        //        mangtam.Add(c.Mangtemp[i]);
+        //    }
+        //    for (int i = 0; i < dem; i++)
+        //        for (int j = 0; j < dem; j++)
+        //            if (mangtam[i].Sohieu > mangtam[j].Sohieu)
+        //            {
+        //                container tam2 = mangtam[i];
+        //                mangtam[i] = mangtam[j];
+        //                mangtam[j] = tam2;
+        //            }
+        //    Stack<container> temp = new Stack<container>();
+        //    num += c.Tempnum;
+        //    str1 += c.Strtemp1;
+        //    tempnum += c.Tempnum;
+        //    for (int i = 0; i < dem; i++)
+        //    {
+        //        Num++;
+        //        int dem2 = 0;
+        //        for(int j = 0; j < c.Mangtemp.Count; j++)
+        //        {
+        //            if (mangtam[i] == c.Mangtemp[j]) dem2++;
+        //        }
+        //        if (dem2 == 0)  Str1 += "Time " + Num + ":" +"ship"+"\t"+"\t"+ mangtam[i].Sohieu + "\t" + "->" + "\t" + ltemp + "\r\n";
+        //        else Str1 += "Time " + Num + ":" + "tempyard" + "\t"+ mangtam[i].Sohieu + "\t" + "->" + "\t" + ltemp + "\r\n";
+        //        temp.Push(mangtam[i]);
 
-            }
-            A.Add(temp);
-            c.Tempnum = 0;
-            c.Strtemp1 = "";
-            ltemp++;
-        }
-        public string showstorage()
+        //    }
+        //    A.Add(temp);
+        //    c.Tempnum = 0;
+        //    c.Strtemp1 = "";
+        //    ltemp++;
+        //}
+        public string showstorage(nhapfile nh)
         {
             String str = "";
             int tong = 0;
@@ -105,7 +103,7 @@ namespace Btlop
 
             }
             Console.WriteLine();
-            for (int i = 1; i <= tong; i++)
+            for (int i = 1; i <= nh.Heightyard; i++)
             {
                 str += "\r\n" + "r" + i + "\t";
                 int dem = 0;
@@ -116,13 +114,10 @@ namespace Btlop
                         str += (a.Pop().Sohieu + "\t");
                         dem++;
                     }
-                    
+                    else str += ("x" + "\t");
+
                 }
-                while (dem < A.Count)
-                {
-                    str += ("x" + "\t");
-                    dem++;
-                }
+                
                 
                     
             }
