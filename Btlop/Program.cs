@@ -19,13 +19,11 @@ namespace Btlop
             storage b = new storage();
             temp c = new temp();       
             nhapfile nhap = new nhapfile();
-            nhap.FileName = "demo2.txt";
+            nhap.FileName = "demo1.txt";
             nhap.ReadData();
             if (nhap.Containers != 0)
                 if (nhap.Trung == 0)
-                {
-                    
-                        
+                {                                       
                         int column;
                         column = nhap.Column;
                         a.A1 = nhap.Stacks;
@@ -38,8 +36,11 @@ namespace Btlop
                         while(a.totalvessel() != 0)
                         {   
                             List<container> tam = a.grab1(x);
+                        if (tam.Count != 0)
+                        {
                             b.catching(tam);
                             b.sapxep();
+                        }
                         }
                         long end = (long)(DateTime.UtcNow - Jan1st1970).TotalMilliseconds;
                         nhap.saveFile(b, a, c, "ketqua.txt", (end - bg) * 0.001);                                     

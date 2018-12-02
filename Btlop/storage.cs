@@ -103,13 +103,14 @@ namespace Btlop
 
             }
             Console.WriteLine();
-            for (int i = 1; i <= nh.Heightyard; i++)
+            for (int i = nh.Heightyard; i >= 1; i--)
             {
                 str += "\r\n" + "r" + i + "\t";
                 int dem = 0;
                  foreach (Stack<container> a in A)
                 {
-                    if (a.Count<container>() != 0)
+                    int demcontainer = a.Count;
+                    if ((demcontainer != 0) && (demcontainer == i))
                     {
                         str += (a.Pop().Sohieu + "\t");
                         dem++;
