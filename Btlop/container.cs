@@ -8,8 +8,9 @@ namespace Btlop
 {
     class container
     {
-       double sohieu;
+       int sohieu;
 
-        public double Sohieu { get => sohieu; set => sohieu = value; }
+        public int Sohieu { get => sohieu; set => sohieu = value; }
+    
     }
 }

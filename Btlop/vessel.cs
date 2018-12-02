@@ -85,7 +85,39 @@ namespace Btlop
 
             return tam;
         }
-       
+        public List<container> grabbehonM(int m,int n)
+        {
+            int k = A1.Count<Stack<container>>();
+            List<container> tam = new List<container>();
+            int dem = 0, dem2 = 0, dem3 = 0, demstack1 = 0;
+            while (dem < n)
+            {
+
+                foreach (Stack<container> i in A1)
+                {
+                    if (i.Count<container>() == 0 ) demstack1++;
+                    if (i.Count<container>() != 0  && i.Peek().Sohieu < m)
+                    {
+                        tam.Add(i.Pop());
+                        dem++; demstack1++;
+                        if (demstack1 >= k) break;
+                    }
+                    if (dem == n) break;
+                    dem2++;
+                    if (demstack1 == 0) dem2 = 0;
+                }
+                if (demstack1 >= k)
+                {
+                    demstack1 = 0;
+                    break;
+                }
+                if (dem2 > n) break;
+                if (dem3 > n) break;
+                dem3++;
+            }
+
+            return tam;
+        }
         public void showvessel()
         {
             int k = 0;

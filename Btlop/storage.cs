@@ -31,14 +31,14 @@ namespace Btlop
         {          
             int dem = 0;
             dem = mangtam.Count ;
-            for (int i = 0; i < dem; i++)
-                for (int j = 0; j < dem; j++)
-                    if (mangtam[i].Sohieu > mangtam[j].Sohieu)
-                    {
-                        container tam2 = mangtam[i];
-                        mangtam[i] = mangtam[j];
-                        mangtam[j] = tam2;
-                    }
+            //for (int i = 0; i < dem; i++)
+            //    for (int j = 0; j < dem; j++)
+            //        if (mangtam[i].Sohieu > mangtam[j].Sohieu)
+            //        {
+            //            container tam2 = mangtam[i];
+            //            mangtam[i] = mangtam[j];
+            //            mangtam[j] = tam2;
+            //        }
             Stack<container> temp = new Stack<container>();
             for (int i = 0; i < dem; i++)
             {
@@ -103,9 +103,11 @@ namespace Btlop
 
             }
             Console.WriteLine();
+            int j = 1; 
             for (int i = nh.Heightyard; i >= 1; i--)
             {
-                str += "\r\n" + "r" + i + "\t";
+                str += "\r\n" + "r" + j + "\t";
+                j++;
                 int dem = 0;
                  foreach (Stack<container> a in A)
                 {

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace Btlop
     class Program
     {
         private static readonly DateTime Jan1st1970 = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+       
         static void Main(string[] args)
         {
             
@@ -19,13 +21,12 @@ namespace Btlop
             storage b = new storage();
             temp c = new temp();       
             nhapfile nhap = new nhapfile();
-            nhap.FileName = "demo1.txt";
+            nhap.FileName = "demo4.txt";
             nhap.ReadData();
             if (nhap.Containers != 0)
                 if (nhap.Trung == 0)
                 {                                       
-                        int column;
-                        column = nhap.Column;
+                        
                         a.A1 = nhap.Stacks;
                         Console.WriteLine("dau vao ");
                         a.showvessel();
@@ -36,11 +37,25 @@ namespace Btlop
                         while(a.totalvessel() != 0)
                         {   
                             List<container> tam = a.grab1(x);
-                        if (tam.Count != 0)
-                        {
-                            b.catching(tam);
-                            b.sapxep();
-                        }
+                            List<container> tam1 = new List<container>() { new container() };
+
+                            tam.Sort((z, y) => y.Sohieu.CompareTo(z.Sohieu));
+                        //while (tam.Count < nhap.Heightyard && tam1.Count != 0)
+                        //{
+                            
+                        //    tam1 = a.grabbehonM(tam[tam.Count - 1].Sohieu, nhap.Heightyard - 1 - tam.Count);
+                        //    foreach(container cont in tam1)
+                        //    {
+                        //        Console.WriteLine(cont.Sohieu);
+                        //        tam.Add(cont);
+                        //    }
+                        //}                     
+                        //tam.Sort((z, y) => y.Sohieu.CompareTo(z.Sohieu));
+                            if (tam.Count != 0)
+                              {
+                                 b.catching(tam);
+                                 b.sapxep();
+                              }
                         }
                         long end = (long)(DateTime.UtcNow - Jan1st1970).TotalMilliseconds;
                         nhap.saveFile(b, a, c, "ketqua.txt", (end - bg) * 0.001);                                     
