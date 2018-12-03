@@ -54,6 +54,7 @@ namespace Btlop
 
         public List<container> grab1(int n)
         {
+            int thu = 0;
             int k = A1.Count<Stack<container>>(); 
             List<container> tam = new List<container>();
             int dem = 0, dem2 = 0, dem3 = 0;
@@ -61,13 +62,17 @@ namespace Btlop
             {
                 
                     foreach (Stack<container> i in A1)
-                {
+                { 
                     if (i.Count<container>() == 0 && dem2 == demstack) demstack++;
                     if (i.Count<container>() != 0 && dem2 == demstack)
                     {
                         tam.Add(i.Pop());
                         dem++; demstack++;
-                        if (demstack >= k) break;
+                        if (demstack >= k)
+                        {
+                          
+                            break;
+                        }
                     }
                     if (dem == n) break;
                     dem2++;
@@ -85,39 +90,103 @@ namespace Btlop
 
             return tam;
         }
-        public List<container> grabbehonM(int m,int n)
+        public List<container> grab2(int n , nhapfile nh)
         {
-            int k = A1.Count<Stack<container>>();
+            int[] mangdem = new int[A1.Count];
+            int hangthu = 0;
+            int k = A1.Count;
             List<container> tam = new List<container>();
-            int dem = 0, dem2 = 0, dem3 = 0, demstack1 = 0;
+            int dem = 0, dem2 = 0, dem3 = 0;
             while (dem < n)
             {
-
-                foreach (Stack<container> i in A1)
+               for (int l=0; l<A.Count;l++)
                 {
-                    if (i.Count<container>() == 0 ) demstack1++;
-                    if (i.Count<container>() != 0  && i.Peek().Sohieu < m)
+                    if (A1[l].Count<container>() == 0 && l == demstack) demstack++;
+                    else if (A1[l].Count<container>() != 0 && l == demstack && mangdem[l] == 0)
                     {
-                        tam.Add(i.Pop());
-                        dem++; demstack1++;
-                        if (demstack1 >= k) break;
+                        tam.Add(A1[l].Pop());
+                        dem++; demstack++;
+                        if (demstack >= k)
+                        {
+                            demstack = 0;
+                            hangthu++;
+                        }
+                        if (hangthu > 2) break;
+                        mangdem[l] = 1;
+                    }
+                    else if (A1[l].Count<container>() != 0 && l == demstack)
+                    {
+                        demstack++;
+                        if (demstack >= k)
+                        {
+                            demstack = 0;
+                            hangthu++;
+                        }
+                        if (hangthu > 2) break;
                     }
                     if (dem == n) break;
-                    dem2++;
-                    if (demstack1 == 0) dem2 = 0;
+                    
+                    
                 }
-                if (demstack1 >= k)
+                if (demstack >= k)
                 {
-                    demstack1 = 0;
-                    break;
+                    demstack = 0;
+                    hangthu++;
                 }
-                if (dem2 > n) break;
-                if (dem3 > n) break;
-                dem3++;
+                if (hangthu > 2) {
+                    
+                    break; }
+               
+                //if (dem2 > n) {
+                //    Console.WriteLine("ngung 2");
+                //    break; }
+                if (dem > n) ;
+                
+                
             }
-
+            foreach (int i in mangdem)
+            {
+                Console.Write(i);
+            }
+            Console.WriteLine();
+            //Console.WriteLine(hangthu);
+            //Console.WriteLine("dem la " + dem);
+            //Console.WriteLine("dem 2 la " + dem2);
             return tam;
         }
+        //public List<container> grabbehonM(int m,int n)
+        //{
+        //    int k = A1.Count<Stack<container>>();
+        //    List<container> tam = new List<container>();
+        //    int dem = 0, dem2 = 0, dem3 = 0, demstack1 = 0;
+        //    while (dem < n)
+        //    {
+
+        //        foreach (Stack<container> i in A1)
+        //        {
+        //            if (i.Count<container>() == 0 ) demstack1++;
+        //            if (i.Count<container>() != 0  && i.Peek().Sohieu < m)
+        //            {
+        //                tam.Add(i.Pop());
+        //                dem++; demstack1++;
+        //                if (demstack1 >= k) break;
+        //            }
+        //            if (dem == n) break;
+        //            dem2++;
+        //            if (demstack1 == 0) dem2 = 0;
+        //        }
+        //        if (demstack1 >= k)
+        //        {
+        //            demstack1 = 0;
+        //            break;
+        //        }
+        //        if (dem2 > n) break;
+        //        if (dem3 > n) break;
+        //        dem3++;
+        //    }
+
+        //    return tam;
+        //}
         public void showvessel()
         {
             int k = 0;

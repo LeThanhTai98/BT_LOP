@@ -21,7 +21,7 @@ namespace Btlop
             storage b = new storage();
             temp c = new temp();       
             nhapfile nhap = new nhapfile();
-            nhap.FileName = "demo4.txt";
+            nhap.FileName = "retest2.txt";
             nhap.ReadData();
             if (nhap.Containers != 0)
                 if (nhap.Trung == 0)
@@ -35,14 +35,15 @@ namespace Btlop
                     else x = nhap.Heightyard;
   
                         while(a.totalvessel() != 0)
-                        {   
-                            List<container> tam = a.grab1(x);
+                        {
+                        
+                            List<container> tam = a.grab2(x,nhap);
                             List<container> tam1 = new List<container>() { new container() };
 
                             tam.Sort((z, y) => y.Sohieu.CompareTo(z.Sohieu));
                         //while (tam.Count < nhap.Heightyard && tam1.Count != 0)
                         //{
-                            
+
                         //    tam1 = a.grabbehonM(tam[tam.Count - 1].Sohieu, nhap.Heightyard - 1 - tam.Count);
                         //    foreach(container cont in tam1)
                         //    {
@@ -51,6 +52,8 @@ namespace Btlop
                         //    }
                         //}                     
                         //tam.Sort((z, y) => y.Sohieu.CompareTo(z.Sohieu));
+                        
+                    
                             if (tam.Count != 0)
                               {
                                  b.catching(tam);

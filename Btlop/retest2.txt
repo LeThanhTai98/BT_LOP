@@ -1,0 +1,14 @@
+//ship
+5//height
+24//columns
+48//containers
+//yard
+4//height
+//containers
+	c1	c2	c3	c4	c5	c6	c7	c8	c9	c10	c11	c12	c13	c14	c15	c16	c17	c18	c19	c20	c21	c22	c23	c24
+r1	5	x	20	x	x	x	6	34	x	32	x	x	x	23	x	x	x	13	x	9	x	x	16	4
+r2	x	33	14	10	x	x	x	x	x	x	x	x	41	36	x	x	38	31	35	40	x	24	x	x
+r3	48	12	42	22	18	45	29	47	x	19	1	x	49	x	x	x	x	8	x	39	x	3	x	x
+r4	x	37	x	x	x	x	x	x	17	28	x	x	30	x	x	x	x	x	11	x	15	x	x	x
+r5	x	x	x	43	26	x	44	x	25	x	x	x	x	x	x	x	x	27	x	100	x	101	x	2
+
